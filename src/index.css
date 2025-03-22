@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "InterVariable";
+  src: url("./assets/fonts/InterVariable.woff2") format("woff2");
+  font-feature-settings:
+    "ss02" 1,
+    "cv10" 1,
+    "cv11" 1,
+    "tnum" 1;
+}
+
+@font-face {
+  font-family: "PublicPixel";
+  src: url("./assets/fonts/PublicPixel.ttf") format("truetype");
+}
+
+@theme {
+  --font-primary: InterVariable, "sans-serif";
+}
+@theme {
+  --font-brand: PublicPixel, "monospace";
+}
+
+@theme {
+  --color-primary: #3332c8;
+}
+
+@theme {
+  --animate-border-rotate: border-rotate 15s linear infinite;
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
